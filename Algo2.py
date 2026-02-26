@@ -35,16 +35,23 @@ def preferred_stating_city(distances, fuel, mpg):
         cost_miles = distance[i]
         current_miles += (gas_miles - cost_miles)
 
+        
         if current_miles < 0:
             start_city = i + 1
             current_miles = 0
 
+    # The problem guarantees there is exactly one valid starting city,
+    # so start_city will be correct by the end of the loop
     return start_city
 
 if __name__ == "__main__":
+    # Sample input from the project description
     distances = [5,25,15,10,15]
     fuel = [1, 2, 1, 0, 3]
     mpg = 10
-    print(preferred_starting_city(distances, fuel, mpg)) #expected 4
+    
+    # Expected output: 4
+    print(preferred_starting_city(distances, fuel, mpg)) 
+    
 
         
