@@ -32,5 +32,19 @@ def preferred_stating_city(distances, fuel, mpg):
 
         # Convert gallons at city i into drivable miles
         gas_miles = fuel[i] * mpg
+        cost_miles = distance[i]
+        current_miles += (gas_miles - cost_miles)
+
+        if current_miles < 0:
+            start_city = i + 1
+            current_miles = 0
+
+    return start_city
+
+if __name__ == "__main__":
+    distances = [5,25,15,10,15]
+    fuel = [1, 2, 1, 0, 3]
+    mpg = 10
+    print(preferred_starting_city(distances, fuel, mpg)) #expected 4
 
         
