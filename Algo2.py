@@ -25,8 +25,6 @@ def preferred_stating_city(distances, fuel, mpg):
     # drivable miles from current start
     current_miles = 0
 
-    # total distance traveled
-    total_net_miles = 0
 
     # Loops tyhrough each city once
     for i in range(n):
@@ -38,9 +36,7 @@ def preferred_stating_city(distances, fuel, mpg):
 
         net_miles = (gas_miles - cost_miles)   # Net gain miless we gain or lose after visiting city i
 
-        total_net_miles += net_miles     # Update total net miles traveled so far
-
-        current_miles += net_miles       # Update the current miles we have after visiting city i
+        current_miles += net_miles       # Update the current miles we have after visiting city i net_miles       # Update the current miles we have after visiting city i
 
         # if we cannot reach the next city from the current start, we need to change our starting city
         if current_miles < 0:
