@@ -2,6 +2,8 @@
 #marco_chavez@csu.fullerton.edu
 #Richard Le
 #richard.le@csu.fullerton.edu
+#Arman Madatyan 
+#armanmadatyan@csu.fullerton.edu
 
 # Algorithm 2: Preffered Stating City (Greedy)
 
