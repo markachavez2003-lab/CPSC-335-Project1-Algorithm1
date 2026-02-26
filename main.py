@@ -2,6 +2,8 @@
 #marco_chavez@csu.fullerton.edu
 #Richard Le
 #Richard.le@csu.fullerton.edu
+#Arman Madatyan 
+#armanmadatyan@csu.fullerton.edu
 
 from itertools import batched
     
