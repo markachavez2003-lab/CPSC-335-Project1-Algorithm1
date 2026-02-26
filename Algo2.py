@@ -28,16 +28,27 @@ def preferred_stating_city(distances, fuel, mpg):
     # total distance traveled
     total_distance = 0
 
+    # Loops tyhrough each city once
     for i in range(n):
 
         # Convert gallons at city i into drivable miles
         gas_miles = fuel[i] * mpg
-        cost_miles = distance[i]
-        current_miles += (gas_miles - cost_miles)
 
-        
+        cost_miles = distances[i]       # miles needed to get to the next city
+
+        net_miles = (gas_miles - cost_miles)   # Net gain miless we gain or lose after visiting city i
+
+        total_distance += net_miles     # Update the total distance traveled so far
+
+        current_miles += net_miles       # Update the current miles we have after visiting city i
+
+        # if we cannot reach the next city from the current start, we need to change our starting city
         if current_miles < 0:
+            # Current start_city fails
+            # Next City (i+1) becomes the new candidate for starting city
             start_city = i + 1
+
+            # Reset current miles for the new candidate starting city
             current_miles = 0
 
     # The problem guarantees there is exactly one valid starting city,
@@ -50,8 +61,9 @@ if __name__ == "__main__":
     fuel = [1, 2, 1, 0, 3]
     mpg = 10
     
+    result = preferred_stating_city(distances, fuel, mpg)
     # Expected output: 4
-    print(preferred_starting_city(distances, fuel, mpg)) 
+    print("Preferred Starting City Index:", result) 
     
 
         
