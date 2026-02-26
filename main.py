@@ -27,17 +27,22 @@ def pairing_alg():
 
             #swaps correct partner since the match above failed
             partner_row = couples.index(partner)
-            couples[i+1], couples[partner_row] = couples[partner_row], couples[i+1]
+            couples[i + 1], couples[partner_row] = (
+                couples[partner_row],
+                couples[i + 1],
+            )
             
             #counts number of swaps made
             num_swaps+=1
             
     #formats the pairs for display
     paired_couples = list(batched(couples, 2))
-    print(f" Total swaps: {num_swaps} swaps\n  Final seating:{paired_couples}")    
-            
-print(f"Orignal Seating: {couples}")
-pairing_alg()   
+    print(f"Total swaps: {num_swaps}")
+    print(f"Final seating: {paired_couples}")
+
+
+print(f"Original Seating: {couples}")
+pairing_alg()  
         
 
 
