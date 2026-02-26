@@ -1,5 +1,7 @@
 #Marco Chavez
 #marco_chavez@csu.fullerton.edu
+#Richard Le
+#Richard.le@csu.fullerton.edu
 
 from itertools import batched
     
