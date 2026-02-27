@@ -1,3 +1,9 @@
+- Marco Chavez
+- marco_chavez@csu.fullerton.edu
+- Richard Le
+- Richard.le@csu.fullerton.edu
+- Arman Madatyan 
+- armanmadatyan@csu.fullerton.edu
 # CPSC 335 — Project 1 — Algorithm 1  
 ## Connecting Pairs of Persons
 
